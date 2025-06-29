@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Vazirmatn", sans-serif;
+}
+li {
+  list-style: none;
+}
+body {
+  position: relative;
+}
+.box {
+  width: 400px;
+  height: 150px;
+
+  padding: 20px;
+  margin: 20px;
+
+  color: #000;
+  background-color: hsl(30, 54%, 62%);
+
+  border-radius: 5px;
+
+  display: flex;
+  gap: 10px;
+
+  position: relative;
+  --x: 0;
+  --y: 0;
+  transform: translateX(var(--x)) translateY(var(--y));
+
+  transition: transform 0.2s ease-in;
+}
+.info-section {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fragile {
+  width: 58px;
+  height: auto;
+  object-fit: cover;
+}
+.transport-logo {
+  width: 86px;
+  height: auto;
+  object-fit: cover;
+
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+}
+.logo-section {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.fragile-wrapper,
+.transport-wrapper {
+  display: flex;
+  align-items: center;
+}
+.key-controls {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+
+  position: fixed;
+  bottom: 25px;
+}
+.key-controls button {
+  padding: 20px;
+
+  border: 2px solid hsl(0, 0%, 80%);
+  border-radius: 5px;
+
+  background-color: hsl(0, 0%, 94%);
+
+  outline: none;
+
+  cursor: pointer;
+}
+.three-buttons,
+.one-button {
+  display: flex;
+  gap: 5px;
+}
+.key-controls button:focus {
+  outline: 2px dashed hsl(206, 100%, 50%);
+  outline-offset: 1.5px;
+}
+.key-controls button:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+/* Media-Query */
+@media only screen and (max-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box {
+    width: 220px;
+    height: auto;
+
+    flex-direction: column;
+    gap: 15px;
+  }
+  .info-section {
+    justify-content: space-evenly;
+  }
+  .logo-section {
+    justify-content: center;
+  }
+}
